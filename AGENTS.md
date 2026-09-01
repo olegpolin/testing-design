@@ -18,8 +18,11 @@ Several parts of this stack evolve quickly and training data is often stale — 
 
 ## Design
 
-- UI is built with **shadcn-svelte**. Add components as needed.
-- All design tokens live in `src/routes/layout.css`.
+- Read `DESIGN.md` before building UI. It defines the Bauhaus visual language (palette, type, shapes, spacing, components) the site follows.
+- UI is built with **shadcn-svelte**. Add components as needed. Note: the shadcn-svelte CLI currently fails on this SvelteKit 3 tsconfig (`extends: "$app/tsconfig"`); if `add` errors, fetch the item JSON from `https://shadcn-svelte.com/registry/styles/nova/<name>.json` (send a browser User-Agent) and write its files under `src/lib/components/ui/`, replacing `$UI$/` with `#lib/components/ui/` and `$UTILS$` with `#lib/utils`.
+- Site-level components (header, footer, shapes, page hero, CTA) live in `src/lib/components/site/`; fake studio content (nav, services, plans, team) lives in `src/lib/site.ts`.
+- Import `#lib/...` modules with explicit extensions (`#lib/utils.js`, `#lib/components/ui/button/index.js`) or svelte-check cannot resolve them.
+- All design tokens live in `src/routes/layout.css`, along with the `site-container`, `section-pad`, `eyebrow`, `display`, and `rule-link` utilities.
 - Don't hardcode colors in components, use the theme variables instead and add new ones if needed.
 - Every color variable should be defined in both light and dark mode.
 - Make sure any UI you build is fully responsive, and looks good in both light and dark mode.

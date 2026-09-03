@@ -6,114 +6,476 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-	--background: oklch(1 0 0);
-	--foreground: oklch(0.145 0 0);
-	--card: oklch(1 0 0);
-	--card-foreground: oklch(0.145 0 0);
-	--popover: oklch(1 0 0);
-	--popover-foreground: oklch(0.145 0 0);
-	--primary: oklch(0.205 0 0);
-	--primary-foreground: oklch(0.985 0 0);
-	--secondary: oklch(0.97 0 0);
-	--secondary-foreground: oklch(0.205 0 0);
-	--muted: oklch(0.97 0 0);
-	--muted-foreground: oklch(0.556 0 0);
-	--accent: oklch(0.97 0 0);
-	--accent-foreground: oklch(0.205 0 0);
-	--destructive: oklch(0.577 0.245 27.325);
-	--border: oklch(0.922 0 0);
-	--input: oklch(0.922 0 0);
-	--ring: oklch(0.708 0 0);
-	--chart-1: oklch(0.87 0 0);
-	--chart-2: oklch(0.556 0 0);
-	--chart-3: oklch(0.439 0 0);
-	--chart-4: oklch(0.371 0 0);
-	--chart-5: oklch(0.269 0 0);
-	--radius: 0.625rem;
-	--sidebar: oklch(0.985 0 0);
-	--sidebar-foreground: oklch(0.145 0 0);
-	--sidebar-primary: oklch(0.205 0 0);
-	--sidebar-primary-foreground: oklch(0.985 0 0);
-	--sidebar-accent: oklch(0.97 0 0);
-	--sidebar-accent-foreground: oklch(0.205 0 0);
-	--sidebar-border: oklch(0.922 0 0);
-	--sidebar-ring: oklch(0.708 0 0);
+	/* Material Design 3 Expressive Color System - Light Mode (Default Indigo/Violet Seed) */
+	--md-sys-color-primary: oklch(0.48 0.22 272);
+	--md-sys-color-on-primary: oklch(1 0 0);
+	--md-sys-color-primary-container: oklch(0.92 0.08 272);
+	--md-sys-color-on-primary-container: oklch(0.24 0.16 272);
+	--md-sys-color-inverse-primary: oklch(0.82 0.12 272);
+
+	--md-sys-color-secondary: oklch(0.52 0.09 272);
+	--md-sys-color-on-secondary: oklch(1 0 0);
+	--md-sys-color-secondary-container: oklch(0.93 0.04 272);
+	--md-sys-color-on-secondary-container: oklch(0.26 0.06 272);
+
+	--md-sys-color-tertiary: oklch(0.55 0.20 345);
+	--md-sys-color-on-tertiary: oklch(1 0 0);
+	--md-sys-color-tertiary-container: oklch(0.93 0.07 345);
+	--md-sys-color-on-tertiary-container: oklch(0.30 0.14 345);
+
+	--md-sys-color-error: oklch(0.55 0.22 25);
+	--md-sys-color-on-error: oklch(1 0 0);
+	--md-sys-color-error-container: oklch(0.94 0.06 25);
+	--md-sys-color-on-error-container: oklch(0.32 0.15 25);
+
+	--md-sys-color-surface: oklch(0.985 0.005 272);
+	--md-sys-color-surface-dim: oklch(0.92 0.008 272);
+	--md-sys-color-surface-bright: oklch(0.995 0.003 272);
+	--md-sys-color-surface-container-lowest: oklch(1 0 0);
+	--md-sys-color-surface-container-low: oklch(0.965 0.006 272);
+	--md-sys-color-surface-container: oklch(0.94 0.008 272);
+	--md-sys-color-surface-container-high: oklch(0.915 0.01 272);
+	--md-sys-color-surface-container-highest: oklch(0.885 0.012 272);
+	--md-sys-color-on-surface: oklch(0.18 0.015 272);
+	--md-sys-color-surface-variant: oklch(0.92 0.012 272);
+	--md-sys-color-on-surface-variant: oklch(0.42 0.02 272);
+
+	--md-sys-color-outline: oklch(0.60 0.02 272);
+	--md-sys-color-outline-variant: oklch(0.84 0.015 272);
+	--md-sys-color-inverse-surface: oklch(0.22 0.015 272);
+	--md-sys-color-inverse-on-surface: oklch(0.95 0.005 272);
+	--md-sys-color-scrim: oklch(0 0 0 / 0.4);
+	--md-sys-color-shadow: oklch(0 0 0 / 0.2);
+
+	/* M3 Expressive Elevation Shadows */
+	--md-sys-elevation-0: none;
+	--md-sys-elevation-1: 0px 1px 3px 1px oklch(0 0 0 / 0.12), 0px 1px 2px 0px oklch(0 0 0 / 0.20);
+	--md-sys-elevation-2: 0px 2px 6px 2px oklch(0 0 0 / 0.12), 0px 1px 2px 0px oklch(0 0 0 / 0.20);
+	--md-sys-elevation-3: 0px 4px 8px 3px oklch(0 0 0 / 0.12), 0px 1px 3px 0px oklch(0 0 0 / 0.20);
+	--md-sys-elevation-4: 0px 6px 10px 4px oklch(0 0 0 / 0.12), 0px 2px 3px 0px oklch(0 0 0 / 0.20);
+	--md-sys-elevation-5: 0px 8px 12px 6px oklch(0 0 0 / 0.12), 0px 4px 4px 0px oklch(0 0 0 / 0.20);
+
+	/* M3 Expressive Shapes */
+	--md-sys-shape-none: 0px;
+	--md-sys-shape-xs: 0.25rem;
+	--md-sys-shape-sm: 0.5rem;
+	--md-sys-shape-md: 0.75rem;
+	--md-sys-shape-lg: 1rem;
+	--md-sys-shape-xl: 1.75rem;
+	--md-sys-shape-full: 9999px;
+
+	/* M3 State Layers */
+	--md-sys-state-hover: 0.08;
+	--md-sys-state-focus: 0.12;
+	--md-sys-state-pressed: 0.12;
+	--md-sys-state-dragged: 0.16;
+
+	/* shadcn baseline mapping to MD3 tokens */
+	--background: var(--md-sys-color-surface);
+	--foreground: var(--md-sys-color-on-surface);
+	--card: var(--md-sys-color-surface-container-low);
+	--card-foreground: var(--md-sys-color-on-surface);
+	--popover: var(--md-sys-color-surface-container-high);
+	--popover-foreground: var(--md-sys-color-on-surface);
+	--primary: var(--md-sys-color-primary);
+	--primary-foreground: var(--md-sys-color-on-primary);
+	--secondary: var(--md-sys-color-secondary-container);
+	--secondary-foreground: var(--md-sys-color-on-secondary-container);
+	--muted: var(--md-sys-color-surface-container-highest);
+	--muted-foreground: var(--md-sys-color-on-surface-variant);
+	--accent: var(--md-sys-color-surface-container-high);
+	--accent-foreground: var(--md-sys-color-primary);
+	--destructive: var(--md-sys-color-error);
+	--destructive-foreground: var(--md-sys-color-on-error);
+	--border: var(--md-sys-color-outline-variant);
+	--input: var(--md-sys-color-outline-variant);
+	--ring: var(--md-sys-color-primary);
+	--radius: 1rem;
+
+	--chart-1: var(--md-sys-color-primary);
+	--chart-2: var(--md-sys-color-secondary);
+	--chart-3: var(--md-sys-color-tertiary);
+	--chart-4: var(--md-sys-color-primary-container);
+	--chart-5: var(--md-sys-color-surface-container-highest);
+
+	--sidebar: var(--md-sys-color-surface-container-low);
+	--sidebar-foreground: var(--md-sys-color-on-surface);
+	--sidebar-primary: var(--md-sys-color-primary);
+	--sidebar-primary-foreground: var(--md-sys-color-on-primary);
+	--sidebar-accent: var(--md-sys-color-surface-container-high);
+	--sidebar-accent-foreground: var(--md-sys-color-primary);
+	--sidebar-border: var(--md-sys-color-outline-variant);
+	--sidebar-ring: var(--md-sys-color-primary);
 }
 
 .dark {
-	--background: oklch(0.145 0 0);
-	--foreground: oklch(0.985 0 0);
-	--card: oklch(0.205 0 0);
-	--card-foreground: oklch(0.985 0 0);
-	--popover: oklch(0.205 0 0);
-	--popover-foreground: oklch(0.985 0 0);
-	--primary: oklch(0.922 0 0);
-	--primary-foreground: oklch(0.205 0 0);
-	--secondary: oklch(0.269 0 0);
-	--secondary-foreground: oklch(0.985 0 0);
-	--muted: oklch(0.269 0 0);
-	--muted-foreground: oklch(0.708 0 0);
-	--accent: oklch(0.269 0 0);
-	--accent-foreground: oklch(0.985 0 0);
-	--destructive: oklch(0.704 0.191 22.216);
-	--border: oklch(1 0 0 / 10%);
-	--input: oklch(1 0 0 / 15%);
-	--ring: oklch(0.556 0 0);
-	--chart-1: oklch(0.87 0 0);
-	--chart-2: oklch(0.556 0 0);
-	--chart-3: oklch(0.439 0 0);
-	--chart-4: oklch(0.371 0 0);
-	--chart-5: oklch(0.269 0 0);
-	--sidebar: oklch(0.205 0 0);
-	--sidebar-foreground: oklch(0.985 0 0);
-	--sidebar-primary: oklch(0.488 0.243 264.376);
-	--sidebar-primary-foreground: oklch(0.985 0 0);
-	--sidebar-accent: oklch(0.269 0 0);
-	--sidebar-accent-foreground: oklch(0.985 0 0);
-	--sidebar-border: oklch(1 0 0 / 10%);
-	--sidebar-ring: oklch(0.556 0 0);
+	/* Material Design 3 Expressive Color System - Dark Mode (Default Indigo/Violet Seed) */
+	--md-sys-color-primary: oklch(0.82 0.14 272);
+	--md-sys-color-on-primary: oklch(0.24 0.16 272);
+	--md-sys-color-primary-container: oklch(0.38 0.18 272);
+	--md-sys-color-on-primary-container: oklch(0.92 0.06 272);
+	--md-sys-color-inverse-primary: oklch(0.48 0.22 272);
+
+	--md-sys-color-secondary: oklch(0.78 0.06 272);
+	--md-sys-color-on-secondary: oklch(0.25 0.06 272);
+	--md-sys-color-secondary-container: oklch(0.35 0.06 272);
+	--md-sys-color-on-secondary-container: oklch(0.92 0.04 272);
+
+	--md-sys-color-tertiary: oklch(0.84 0.12 345);
+	--md-sys-color-on-tertiary: oklch(0.30 0.14 345);
+	--md-sys-color-tertiary-container: oklch(0.42 0.16 345);
+	--md-sys-color-on-tertiary-container: oklch(0.94 0.05 345);
+
+	--md-sys-color-error: oklch(0.78 0.18 25);
+	--md-sys-color-on-error: oklch(0.35 0.18 25);
+	--md-sys-color-error-container: oklch(0.44 0.20 25);
+	--md-sys-color-on-error-container: oklch(0.94 0.06 25);
+
+	--md-sys-color-surface: oklch(0.14 0.01 272);
+	--md-sys-color-surface-dim: oklch(0.11 0.01 272);
+	--md-sys-color-surface-bright: oklch(0.24 0.012 272);
+	--md-sys-color-surface-container-lowest: oklch(0.09 0.008 272);
+	--md-sys-color-surface-container-low: oklch(0.17 0.01 272);
+	--md-sys-color-surface-container: oklch(0.20 0.012 272);
+	--md-sys-color-surface-container-high: oklch(0.24 0.014 272);
+	--md-sys-color-surface-container-highest: oklch(0.29 0.016 272);
+	--md-sys-color-on-surface: oklch(0.92 0.01 272);
+	--md-sys-color-surface-variant: oklch(0.26 0.015 272);
+	--md-sys-color-on-surface-variant: oklch(0.76 0.02 272);
+
+	--md-sys-color-outline: oklch(0.56 0.02 272);
+	--md-sys-color-outline-variant: oklch(0.32 0.02 272);
+	--md-sys-color-inverse-surface: oklch(0.92 0.01 272);
+	--md-sys-color-inverse-on-surface: oklch(0.18 0.015 272);
+	--md-sys-color-scrim: oklch(0 0 0 / 0.6);
+	--md-sys-color-shadow: oklch(0 0 0 / 0.4);
+
+	/* M3 Dark Elevation */
+	--md-sys-elevation-0: none;
+	--md-sys-elevation-1: 0px 1px 3px 1px oklch(0 0 0 / 0.35), 0px 1px 2px 0px oklch(0 0 0 / 0.45);
+	--md-sys-elevation-2: 0px 2px 6px 2px oklch(0 0 0 / 0.35), 0px 1px 2px 0px oklch(0 0 0 / 0.45);
+	--md-sys-elevation-3: 0px 4px 8px 3px oklch(0 0 0 / 0.35), 0px 1px 3px 0px oklch(0 0 0 / 0.45);
+	--md-sys-elevation-4: 0px 6px 10px 4px oklch(0 0 0 / 0.35), 0px 2px 3px 0px oklch(0 0 0 / 0.45);
+	--md-sys-elevation-5: 0px 8px 12px 6px oklch(0 0 0 / 0.35), 0px 4px 4px 0px oklch(0 0 0 / 0.45);
+
+	/* shadcn baseline mapping to MD3 tokens */
+	--background: var(--md-sys-color-surface);
+	--foreground: var(--md-sys-color-on-surface);
+	--card: var(--md-sys-color-surface-container-low);
+	--card-foreground: var(--md-sys-color-on-surface);
+	--popover: var(--md-sys-color-surface-container-high);
+	--popover-foreground: var(--md-sys-color-on-surface);
+	--primary: var(--md-sys-color-primary);
+	--primary-foreground: var(--md-sys-color-on-primary);
+	--secondary: var(--md-sys-color-secondary-container);
+	--secondary-foreground: var(--md-sys-color-on-secondary-container);
+	--muted: var(--md-sys-color-surface-container-highest);
+	--muted-foreground: var(--md-sys-color-on-surface-variant);
+	--accent: var(--md-sys-color-surface-container-high);
+	--accent-foreground: var(--md-sys-color-primary);
+	--destructive: var(--md-sys-color-error);
+	--destructive-foreground: var(--md-sys-color-on-error);
+	--border: var(--md-sys-color-outline-variant);
+	--input: var(--md-sys-color-outline-variant);
+	--ring: var(--md-sys-color-primary);
+
+	--sidebar: var(--md-sys-color-surface-container-low);
+	--sidebar-foreground: var(--md-sys-color-on-surface);
+	--sidebar-primary: var(--md-sys-color-primary);
+	--sidebar-primary-foreground: var(--md-sys-color-on-primary);
+	--sidebar-accent: var(--md-sys-color-surface-container-high);
+	--sidebar-accent-foreground: var(--md-sys-color-primary);
+	--sidebar-border: var(--md-sys-color-outline-variant);
+	--sidebar-ring: var(--md-sys-color-primary);
 }
+
+/* ==========================================================================
+   DYNAMIC SEED THEMES (Material You Dynamic Palette Variations)
+   ========================================================================== */
+
+/* Ocean Teal Seed (Hue ~195) */
+[data-theme="teal"] {
+	--md-sys-color-primary: oklch(0.50 0.18 195);
+	--md-sys-color-on-primary: oklch(1 0 0);
+	--md-sys-color-primary-container: oklch(0.92 0.07 195);
+	--md-sys-color-on-primary-container: oklch(0.24 0.14 195);
+	--md-sys-color-inverse-primary: oklch(0.80 0.12 195);
+	--md-sys-color-secondary: oklch(0.52 0.08 195);
+	--md-sys-color-secondary-container: oklch(0.93 0.04 195);
+	--md-sys-color-on-secondary-container: oklch(0.25 0.06 195);
+	--md-sys-color-tertiary: oklch(0.56 0.18 280);
+	--md-sys-color-tertiary-container: oklch(0.93 0.06 280);
+	--md-sys-color-on-tertiary-container: oklch(0.28 0.12 280);
+}
+.dark[data-theme="teal"], [data-theme="teal"].dark, [data-theme="teal"] .dark {
+	--md-sys-color-primary: oklch(0.80 0.12 195);
+	--md-sys-color-on-primary: oklch(0.22 0.14 195);
+	--md-sys-color-primary-container: oklch(0.36 0.15 195);
+	--md-sys-color-on-primary-container: oklch(0.92 0.06 195);
+	--md-sys-color-secondary: oklch(0.76 0.06 195);
+	--md-sys-color-secondary-container: oklch(0.34 0.06 195);
+	--md-sys-color-on-secondary-container: oklch(0.92 0.04 195);
+	--md-sys-color-tertiary: oklch(0.82 0.12 280);
+	--md-sys-color-tertiary-container: oklch(0.40 0.14 280);
+	--md-sys-color-on-tertiary-container: oklch(0.93 0.05 280);
+}
+
+/* Botanical Forest Seed (Hue ~145) */
+[data-theme="forest"] {
+	--md-sys-color-primary: oklch(0.48 0.18 145);
+	--md-sys-color-on-primary: oklch(1 0 0);
+	--md-sys-color-primary-container: oklch(0.92 0.07 145);
+	--md-sys-color-on-primary-container: oklch(0.22 0.14 145);
+	--md-sys-color-inverse-primary: oklch(0.80 0.12 145);
+	--md-sys-color-secondary: oklch(0.50 0.07 145);
+	--md-sys-color-secondary-container: oklch(0.93 0.04 145);
+	--md-sys-color-on-secondary-container: oklch(0.24 0.05 145);
+	--md-sys-color-tertiary: oklch(0.54 0.16 75);
+	--md-sys-color-tertiary-container: oklch(0.93 0.06 75);
+	--md-sys-color-on-tertiary-container: oklch(0.28 0.11 75);
+}
+.dark[data-theme="forest"], [data-theme="forest"].dark, [data-theme="forest"] .dark {
+	--md-sys-color-primary: oklch(0.79 0.12 145);
+	--md-sys-color-on-primary: oklch(0.20 0.14 145);
+	--md-sys-color-primary-container: oklch(0.34 0.15 145);
+	--md-sys-color-on-primary-container: oklch(0.92 0.06 145);
+	--md-sys-color-secondary: oklch(0.75 0.06 145);
+	--md-sys-color-secondary-container: oklch(0.32 0.05 145);
+	--md-sys-color-on-secondary-container: oklch(0.92 0.04 145);
+	--md-sys-color-tertiary: oklch(0.81 0.12 75);
+	--md-sys-color-tertiary-container: oklch(0.38 0.12 75);
+	--md-sys-color-on-tertiary-container: oklch(0.93 0.05 75);
+}
+
+/* Radiant Amber Seed (Hue ~65) */
+[data-theme="amber"] {
+	--md-sys-color-primary: oklch(0.56 0.19 65);
+	--md-sys-color-on-primary: oklch(1 0 0);
+	--md-sys-color-primary-container: oklch(0.93 0.08 65);
+	--md-sys-color-on-primary-container: oklch(0.28 0.15 65);
+	--md-sys-color-inverse-primary: oklch(0.82 0.14 65);
+	--md-sys-color-secondary: oklch(0.55 0.09 65);
+	--md-sys-color-secondary-container: oklch(0.94 0.04 65);
+	--md-sys-color-on-secondary-container: oklch(0.28 0.06 65);
+	--md-sys-color-tertiary: oklch(0.52 0.18 25);
+	--md-sys-color-tertiary-container: oklch(0.93 0.06 25);
+	--md-sys-color-on-tertiary-container: oklch(0.28 0.13 25);
+}
+.dark[data-theme="amber"], [data-theme="amber"].dark, [data-theme="amber"] .dark {
+	--md-sys-color-primary: oklch(0.83 0.14 65);
+	--md-sys-color-on-primary: oklch(0.28 0.14 65);
+	--md-sys-color-primary-container: oklch(0.42 0.16 65);
+	--md-sys-color-on-primary-container: oklch(0.93 0.07 65);
+	--md-sys-color-secondary: oklch(0.78 0.07 65);
+	--md-sys-color-secondary-container: oklch(0.36 0.06 65);
+	--md-sys-color-on-secondary-container: oklch(0.92 0.04 65);
+	--md-sys-color-tertiary: oklch(0.81 0.14 25);
+	--md-sys-color-tertiary-container: oklch(0.42 0.16 25);
+	--md-sys-color-on-tertiary-container: oklch(0.94 0.05 25);
+}
+
+/* Berry Crimson Seed (Hue ~350) */
+[data-theme="rose"] {
+	--md-sys-color-primary: oklch(0.52 0.22 350);
+	--md-sys-color-on-primary: oklch(1 0 0);
+	--md-sys-color-primary-container: oklch(0.93 0.08 350);
+	--md-sys-color-on-primary-container: oklch(0.26 0.16 350);
+	--md-sys-color-inverse-primary: oklch(0.82 0.14 350);
+	--md-sys-color-secondary: oklch(0.54 0.09 350);
+	--md-sys-color-secondary-container: oklch(0.94 0.04 350);
+	--md-sys-color-on-secondary-container: oklch(0.27 0.06 350);
+	--md-sys-color-tertiary: oklch(0.54 0.18 290);
+	--md-sys-color-tertiary-container: oklch(0.93 0.07 290);
+	--md-sys-color-on-tertiary-container: oklch(0.28 0.13 290);
+}
+.dark[data-theme="rose"], [data-theme="rose"].dark, [data-theme="rose"] .dark {
+	--md-sys-color-primary: oklch(0.82 0.14 350);
+	--md-sys-color-on-primary: oklch(0.26 0.16 350);
+	--md-sys-color-primary-container: oklch(0.40 0.18 350);
+	--md-sys-color-on-primary-container: oklch(0.93 0.07 350);
+	--md-sys-color-secondary: oklch(0.78 0.06 350);
+	--md-sys-color-secondary-container: oklch(0.36 0.06 350);
+	--md-sys-color-on-secondary-container: oklch(0.92 0.04 350);
+	--md-sys-color-tertiary: oklch(0.82 0.12 290);
+	--md-sys-color-tertiary-container: oklch(0.40 0.15 290);
+	--md-sys-color-on-tertiary-container: oklch(0.93 0.05 290);
+}
+
+/* Tech Monochrome Seed */
+[data-theme="monochrome"] {
+	--md-sys-color-primary: oklch(0.20 0 0);
+	--md-sys-color-on-primary: oklch(1 0 0);
+	--md-sys-color-primary-container: oklch(0.90 0 0);
+	--md-sys-color-on-primary-container: oklch(0.15 0 0);
+	--md-sys-color-inverse-primary: oklch(0.85 0 0);
+	--md-sys-color-secondary: oklch(0.45 0 0);
+	--md-sys-color-secondary-container: oklch(0.92 0 0);
+	--md-sys-color-on-secondary-container: oklch(0.20 0 0);
+	--md-sys-color-tertiary: oklch(0.35 0 0);
+	--md-sys-color-tertiary-container: oklch(0.94 0 0);
+	--md-sys-color-on-tertiary-container: oklch(0.22 0 0);
+}
+.dark[data-theme="monochrome"], [data-theme="monochrome"].dark, [data-theme="monochrome"] .dark {
+	--md-sys-color-primary: oklch(0.92 0 0);
+	--md-sys-color-on-primary: oklch(0.15 0 0);
+	--md-sys-color-primary-container: oklch(0.30 0 0);
+	--md-sys-color-on-primary-container: oklch(0.95 0 0);
+	--md-sys-color-secondary: oklch(0.75 0 0);
+	--md-sys-color-secondary-container: oklch(0.28 0 0);
+	--md-sys-color-on-secondary-container: oklch(0.92 0 0);
+	--md-sys-color-tertiary: oklch(0.80 0 0);
+	--md-sys-color-tertiary-container: oklch(0.32 0 0);
+	--md-sys-color-on-tertiary-container: oklch(0.94 0 0);
+}
+
+/* ==========================================================================
+   TAILWIND THEME EXTENSIONS
+   ========================================================================== */
 
 @theme inline {
 	--font-sans: 'Inter Variable', sans-serif;
-	--color-sidebar-ring: var(--sidebar-ring);
-	--color-sidebar-border: var(--sidebar-border);
-	--color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-	--color-sidebar-accent: var(--sidebar-accent);
-	--color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-	--color-sidebar-primary: var(--sidebar-primary);
-	--color-sidebar-foreground: var(--sidebar-foreground);
-	--color-sidebar: var(--sidebar);
-	--color-chart-5: var(--chart-5);
-	--color-chart-4: var(--chart-4);
-	--color-chart-3: var(--chart-3);
-	--color-chart-2: var(--chart-2);
-	--color-chart-1: var(--chart-1);
-	--color-ring: var(--ring);
-	--color-input: var(--input);
-	--color-border: var(--border);
-	--color-destructive: var(--destructive);
-	--color-accent-foreground: var(--accent-foreground);
-	--color-accent: var(--accent);
-	--color-muted-foreground: var(--muted-foreground);
-	--color-muted: var(--muted);
-	--color-secondary-foreground: var(--secondary-foreground);
-	--color-secondary: var(--secondary);
-	--color-primary-foreground: var(--primary-foreground);
-	--color-primary: var(--primary);
-	--color-popover-foreground: var(--popover-foreground);
-	--color-popover: var(--popover);
-	--color-card-foreground: var(--card-foreground);
-	--color-card: var(--card);
-	--color-foreground: var(--foreground);
+
+	/* MD3 Colors exposed to Tailwind */
+	--color-md-primary: var(--md-sys-color-primary);
+	--color-md-on-primary: var(--md-sys-color-on-primary);
+	--color-md-primary-container: var(--md-sys-color-primary-container);
+	--color-md-on-primary-container: var(--md-sys-color-on-primary-container);
+	--color-md-inverse-primary: var(--md-sys-color-inverse-primary);
+
+	--color-md-secondary: var(--md-sys-color-secondary);
+	--color-md-on-secondary: var(--md-sys-color-on-secondary);
+	--color-md-secondary-container: var(--md-sys-color-secondary-container);
+	--color-md-on-secondary-container: var(--md-sys-color-on-secondary-container);
+
+	--color-md-tertiary: var(--md-sys-color-tertiary);
+	--color-md-on-tertiary: var(--md-sys-color-on-tertiary);
+	--color-md-tertiary-container: var(--md-sys-color-tertiary-container);
+	--color-md-on-tertiary-container: var(--md-sys-color-on-tertiary-container);
+
+	--color-md-error: var(--md-sys-color-error);
+	--color-md-on-error: var(--md-sys-color-on-error);
+	--color-md-error-container: var(--md-sys-color-error-container);
+	--color-md-on-error-container: var(--md-sys-color-on-error-container);
+
+	--color-md-surface: var(--md-sys-color-surface);
+	--color-md-surface-dim: var(--md-sys-color-surface-dim);
+	--color-md-surface-bright: var(--md-sys-color-surface-bright);
+	--color-md-surface-container-lowest: var(--md-sys-color-surface-container-lowest);
+	--color-md-surface-container-low: var(--md-sys-color-surface-container-low);
+	--color-md-surface-container: var(--md-sys-color-surface-container);
+	--color-md-surface-container-high: var(--md-sys-color-surface-container-high);
+	--color-md-surface-container-highest: var(--md-sys-color-surface-container-highest);
+	--color-md-on-surface: var(--md-sys-color-on-surface);
+	--color-md-surface-variant: var(--md-sys-color-surface-variant);
+	--color-md-on-surface-variant: var(--md-sys-color-on-surface-variant);
+
+	--color-md-outline: var(--md-sys-color-outline);
+	--color-md-outline-variant: var(--md-sys-color-outline-variant);
+	--color-md-inverse-surface: var(--md-sys-color-inverse-surface);
+	--color-md-inverse-on-surface: var(--md-sys-color-inverse-on-surface);
+	--color-md-scrim: var(--md-sys-color-scrim);
+	--color-md-shadow: var(--md-sys-color-shadow);
+
+	/* shadcn baseline colors mapped to MD3 */
 	--color-background: var(--background);
-	--radius-sm: calc(var(--radius) * 0.6);
-	--radius-md: calc(var(--radius) * 0.8);
-	--radius-lg: var(--radius);
-	--radius-xl: calc(var(--radius) * 1.4);
-	--radius-2xl: calc(var(--radius) * 1.8);
-	--radius-3xl: calc(var(--radius) * 2.2);
-	--radius-4xl: calc(var(--radius) * 2.6);
+	--color-foreground: var(--foreground);
+	--color-card: var(--card);
+	--color-card-foreground: var(--card-foreground);
+	--color-popover: var(--popover);
+	--color-popover-foreground: var(--popover-foreground);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-secondary: var(--secondary);
+	--color-secondary-foreground: var(--secondary-foreground);
+	--color-muted: var(--muted);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-accent: var(--accent);
+	--color-accent-foreground: var(--accent-foreground);
+	--color-destructive: var(--destructive);
+	--color-destructive-foreground: var(--destructive-foreground);
+	--color-border: var(--border);
+	--color-input: var(--input);
+	--color-ring: var(--ring);
+
+	--color-sidebar: var(--sidebar);
+	--color-sidebar-foreground: var(--sidebar-foreground);
+	--color-sidebar-primary: var(--sidebar-primary);
+	--color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+	--color-sidebar-accent: var(--sidebar-accent);
+	--color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+	--color-sidebar-border: var(--sidebar-border);
+	--color-sidebar-ring: var(--sidebar-ring);
+
+	/* MD3 Expressive Radii */
+	--radius-none: var(--md-sys-shape-none);
+	--radius-xs: var(--md-sys-shape-xs);
+	--radius-sm: var(--md-sys-shape-sm);
+	--radius-md: var(--md-sys-shape-md);
+	--radius-lg: var(--md-sys-shape-lg);
+	--radius-xl: var(--md-sys-shape-xl);
+	--radius-full: var(--md-sys-shape-full);
+
+	/* MD3 Expressive Elevation Shadows */
+	--shadow-elevation-0: var(--md-sys-elevation-0);
+	--shadow-elevation-1: var(--md-sys-elevation-1);
+	--shadow-elevation-2: var(--md-sys-elevation-2);
+	--shadow-elevation-3: var(--md-sys-elevation-3);
+	--shadow-elevation-4: var(--md-sys-elevation-4);
+	--shadow-elevation-5: var(--md-sys-elevation-5);
+}
+
+/* ==========================================================================
+   M3 EXPRESSIVE UTILITIES
+   ========================================================================== */
+
+@layer utilities {
+	.m3-state-layer {
+		position: relative;
+		overflow: hidden;
+	}
+	.m3-state-layer::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background-color: currentColor;
+		opacity: 0;
+		transition: opacity 180ms cubic-bezier(0.2, 0, 0, 1);
+		pointer-events: none;
+		border-radius: inherit;
+	}
+	.m3-state-layer:hover::before {
+		opacity: var(--md-sys-state-hover);
+	}
+	.m3-state-layer:focus-visible::before {
+		opacity: var(--md-sys-state-focus);
+	}
+	.m3-state-layer:active::before {
+		opacity: var(--md-sys-state-pressed);
+	}
+
+	.m3-shape-expressive-1 {
+		border-radius: var(--md-sys-shape-xl) var(--md-sys-shape-sm) var(--md-sys-shape-xl) var(--md-sys-shape-sm);
+	}
+	.m3-shape-expressive-2 {
+		border-radius: var(--md-sys-shape-sm) var(--md-sys-shape-xl) var(--md-sys-shape-sm) var(--md-sys-shape-xl);
+	}
+	.m3-shape-scallop {
+		border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+	}
+
+	@keyframes m3-indeterminate {
+		0% {
+			left: -35%;
+			right: 100%;
+		}
+		60%, 100% {
+			left: 100%;
+			right: -90%;
+		}
+	}
+	.animate-indeterminate-short {
+		animation: m3-indeterminate 1.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+	}
 }
 
 @layer base {
@@ -121,9 +483,10 @@
 		@apply border-border outline-ring/50;
 	}
 	body {
-		@apply bg-background text-foreground;
+		@apply bg-background text-foreground antialiased transition-colors duration-200;
 	}
 	html {
 		@apply font-sans;
 	}
 }
+
